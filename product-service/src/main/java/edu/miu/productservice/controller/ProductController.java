@@ -3,6 +3,7 @@ package edu.miu.productservice.controller;
 import edu.miu.productservice.dto.UserDTO;
 import edu.miu.productservice.entity.Product;
 import edu.miu.productservice.service.ProductService;
+import edu.miu.productservice.service.UserClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,11 +24,13 @@ public class ProductController {
 
     private final ProductService productService;
     private final RestTemplate restTemplate;
+    private final UserClient userClient;
 
     @GetMapping
     public List<Product> getAllProduct() {
-        ResponseEntity<UserDTO> response = restTemplate.getForEntity("http://user-service/api/v1/users/1", UserDTO.class);
-        System.out.println(response.getBody());
+       // ResponseEntity<UserDTO> response = restTemplate.getForEntity("http://user-service/api/v1/users/1", UserDTO.class);
+       // System.out.println(response.getBody());
+        System.out.println(userClient.getUserById(1L));
         return productService.getAllProduct();
     }
 }
