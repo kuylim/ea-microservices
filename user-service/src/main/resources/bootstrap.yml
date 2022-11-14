@@ -1,0 +1,30 @@
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5000/postgres
+#    username: postgres
+#    password: 12345
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#    hibernate:
+#      ddl-auto: update
+#  application:
+#    name: user-service
+#server:
+#  port: 8081
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8888/eureka
+
+spring:
+  cloud:
+    config:
+      profile: dev
+      name: user
+      label: main
+      allow-override: false
+      uri: http://localhost:7777
+  profiles:
+    active: dev

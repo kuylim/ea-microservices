@@ -1,0 +1,18 @@
+#server:
+#  port: 8888
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+
+spring:
+  cloud:
+    config:
+      profile: dev
+      name: discovery
+      label: main
+      allow-override: false
+      uri: http://localhost:7777
+  profiles:
+    active: dev
+
