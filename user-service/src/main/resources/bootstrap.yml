@@ -26,5 +26,13 @@ spring:
       label: main
       allow-override: false
       uri: http://localhost:7777
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      token: hvs.iUkyc7jbFPlIc27p5gwAedgV
   profiles:
     active: dev
+  application:
+    name: user-service
+
