@@ -15,4 +15,3 @@ spring:
       uri: http://localhost:7777
   profiles:
     active: dev
-
