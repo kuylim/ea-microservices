@@ -14,6 +14,9 @@
         <module>product-service</module>
         <module>discovery-service</module>
         <module>config-service</module>
+        <module>order-service</module>
+        <module>checkout-service</module>
+        <module>payment-service</module>
     </modules>
     <groupId>edu.miu</groupId>
     <artifactId>miu-app</artifactId>
