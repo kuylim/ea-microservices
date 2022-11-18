@@ -1,5 +1,6 @@
 package edu.miu.productservice.config;
 
+import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,4 +18,10 @@ public class BeanConfiguration {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+    @Bean
+    public KeycloakSpringBootConfigResolver keycloakConfigResolver(){
+        return new KeycloakSpringBootConfigResolver();
+    }
+
 }
